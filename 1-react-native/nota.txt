@@ -1,0 +1,22 @@
+Icons
+-------------------------
+npm install phosphor-react-native react-native-svg
+npx expo install react-native-svg
+
+gluestack.io
+-------------------------------
+npx gluestack-ui init
+
+# Ejemplo: agregar Box
+npx gluestack-ui add box
+
+# Agregar Button
+npx gluestack-ui add button
+
+# Agregar Text
+npx gluestack-ui add text
+
+# Ver todos los componentes disponibles
+npx gluestack-ui add --help
+
+``

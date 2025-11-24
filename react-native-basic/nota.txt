@@ -1,0 +1,16 @@
+npx expo lint
+npx expo install -- --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+
+-> Acceder a constantes de la aplicacion
+npx expo install expo-constants
+
+-> Permite para la area de View
+npm install react-native-safe-area-context
+
+-> Permite usar SVG
+npx expo install react-native-svg
+
+-> Tailwind css
+npm install nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0
+npm install --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11
+npx tailwindcss init
