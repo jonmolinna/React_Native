@@ -1,0 +1,3 @@
+Instalar Guis UI
+--------------------------------
+npx gluestack-ui init
