@@ -1,3 +1,16 @@
 Instalar Guis UI
 --------------------------------
 npx gluestack-ui init
+
+Dependencias
+---------------------------
+npx expo install react-native-screens => 
+npx expo expo-constants
+npx expo expo-status-bar
+npx expo react-native-safe-area-context => Verificar el espacio entre top y botton
+npx expo expo-linking => enlazar de tu app a otra app
+
+
+app.json
+---------------
+"scheme": "2reactnativerouter", // Para deep linking

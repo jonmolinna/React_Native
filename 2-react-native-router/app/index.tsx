@@ -1,8 +1,10 @@
 import { AnimatedUserCard } from "@/components/Custom/UserCard";
 import { getUsers, USER } from "@/lib/user";
 import { useEffect, useState } from "react";
-import { Text, View, ActivityIndicator, FlatList } from "react-native";
+import { View, ActivityIndicator, FlatList } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import {Link} from 'expo-router'
+import '@/global.css';
 
 const App = () => {
   const [users, setUsers] = useState<USER[]>([]);
@@ -16,6 +18,10 @@ const App = () => {
 
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
+      <Link href="/about" className="text-gray-500">
+      Ir al about
+      </Link>
+
       {users.length === 0 ? (
         <ActivityIndicator color={"#fff"} size={"large"} />
       ) : (

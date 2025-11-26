@@ -1,13 +1,14 @@
 import { USER } from "@/lib/user";
 import { useEffect, useRef } from "react";
 import { StyleSheet, Text, View, Animated } from "react-native";
+import { Score } from "./Score";
 
 export function UserCard({user}: {user: USER}) {
     return (
-        <View key={user.id} style={styles.card}>
-            <Text style={styles.name}>{user.name}</Text>
-            <Text style={styles.username}>{user.email}</Text>
-            <Text style={styles.score}>{user.id}</Text>
+        <View key={user.id} className="border border-gray-200 p-4">
+            <Text className="font-medium text-gray-900 text-lg">{user.name}</Text>
+            <Text className="text-gray-500 text-base">{user.email}</Text>
+            <Score score={user.id} maxScore={100} />
         </View>
     )
 }
@@ -26,9 +27,9 @@ export function AnimatedUserCard({user, index}: {user: USER, index: number}) {
       }, [opacity, index]);
 
     return (
-        <Animated.View>
-      <UserCard user={user} />
-    </Animated.View>
+        <Animated.View style={{ opacity }}>
+          <UserCard user={user} />
+        </Animated.View>
     )
 }
 
