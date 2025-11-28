@@ -10,6 +10,11 @@ npx expo expo-status-bar
 npx expo react-native-safe-area-context => Verificar el espacio entre top y botton
 npx expo expo-linking => enlazar de tu app a otra app
 
+Icons
+-------------------------
+npm install phosphor-react-native react-native-svg
+npx expo install react-native-svg
+
 
 app.json
 ---------------

@@ -1,10 +1,11 @@
 import { AnimatedUserCard } from "@/components/Custom/UserCard";
 import { getUsers, USER } from "@/lib/user";
 import { useEffect, useState } from "react";
-import { View, ActivityIndicator, FlatList } from "react-native";
+import { View, ActivityIndicator, FlatList, Pressable } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import {Link} from 'expo-router'
-import '@/global.css';
+import { Link } from "expo-router";
+import "@/global.css";
+import { AboutIcon } from "@/components/Custom/Icons";
 
 const App = () => {
   const [users, setUsers] = useState<USER[]>([]);
@@ -18,8 +19,10 @@ const App = () => {
 
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <Link href="/about" className="text-gray-500">
-      Ir al about
+      <Link asChild href="/about">
+        <Pressable>
+          <AboutIcon />
+        </Pressable>
       </Link>
 
       {users.length === 0 ? (
