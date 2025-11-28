@@ -1,0 +1,10 @@
+npx expo start -c
+
+Gluestack
+----------------------------------- 
+npx gluestack-ui init
+
+npx gluestack-ui add hstack -> Verifica esto
+npx gluestack-ui add drawer
+npx gluestack-ui add text
+npx gluestack-ui add button
