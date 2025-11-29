@@ -2,12 +2,16 @@ import { Button, ButtonText } from "@/components/ui/button";
 import { Drawer, DrawerBackdrop, DrawerBody, DrawerContent, DrawerFooter, DrawerHeader } from "@/components/ui/drawer";
 import { Text } from "@/components/ui/text";
 import { useState } from "react";
+import {SafeAreaViewBase} from 'react-native'
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default () => {
    const [showDrawer, setShowDrawer] = useState(false);
 
   return (
-    <>
+
+      <SafeAreaView style={{ flex: 1 }}>
+      
       <Button
         onPress={() => {
           setShowDrawer(true);
@@ -44,6 +48,9 @@ export default () => {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-    </>
+      </SafeAreaView>
   );
 };
+
+
+// SafeAreaViewBase -> NO USAR

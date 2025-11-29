@@ -8,3 +8,8 @@ npx gluestack-ui add hstack -> Verifica esto
 npx gluestack-ui add drawer
 npx gluestack-ui add text
 npx gluestack-ui add button
+
+Icons
+-------------------------
+npm install phosphor-react-native react-native-svg
+npx expo install react-native-svg

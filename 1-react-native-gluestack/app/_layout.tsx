@@ -1,20 +1,21 @@
 import { Stack } from "expo-router";
 import "react-native-reanimated";
 
-import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
-import '@/global.css';
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
+import "@/global.css";
+
 
 export const unstable_settings = {
   anchor: "(tabs)",
 };
 
 export default function RootLayout() {
+
   return (
     <GluestackUIProvider mode="dark">
-      <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />  
+        </Stack>
     </GluestackUIProvider>
-  
   );
 }
