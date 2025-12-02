@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Link } from "expo-router";
 import "@/global.css";
 import { AboutIcon } from "@/components/Custom/Icons";
+import { Screen } from "@/components/Custom/Screen";
 
 const App = () => {
   const [users, setUsers] = useState<USER[]>([]);
@@ -18,13 +19,7 @@ const App = () => {
   }, []);
 
   return (
-    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <Link asChild href="/about">
-        <Pressable>
-          <AboutIcon />
-        </Pressable>
-      </Link>
-
+    <Screen>
       {users.length === 0 ? (
         <ActivityIndicator color={"#fff"} size={"large"} />
       ) : (
@@ -36,7 +31,7 @@ const App = () => {
           )}
         />
       )}
-    </View>
+    </Screen>
   );
 };
 
